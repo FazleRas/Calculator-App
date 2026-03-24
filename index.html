@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Calculator</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrapper">
+  <p class="fact-text" id="factText"></p>
+
+  <div class="calculator">
+    <input type="text" id="display" disabled>
+    <div class="numbers">
+      <button onclick="appendValue('1')">1</button>
+      <button onclick="appendValue('2')">2</button>
+      <button onclick="appendValue('3')">3</button>
+      <button onclick="appendValue('4')">4</button>
+      <button onclick="appendValue('5')">5</button>
+      <button onclick="appendValue('6')">6</button>
+      <button onclick="appendValue('7')">7</button>
+      <button onclick="appendValue('8')">8</button>
+      <button onclick="appendValue('9')">9</button>
+      <button onclick="appendValue(Math.PI.toString())">π</button>
+      <button onclick="appendValue('0')">0</button>
+      <button onclick="appendValue(Math.E.toString())">e</button>
+      <button onclick="appendDecimal()">.</button>
+      <button onclick="appendValue('**')">xⁿ</button>
+      <button onclick="calculateSqrt()">√</button>
+    </div>
+    <div class="functions">
+      <button onclick="appendValue('+')">+</button>
+      <button onclick="appendValue('-')">-</button>
+      <button onclick="appendValue('*')">×</button>
+      <button onclick="appendValue('/')">/</button>
+      <button onclick="calculate()">=</button>
+      <button onclick="clearDisplay()">C</button>
+    </div>
+  </div>
+
+  <div class="bottom-buttons">
+    <button id="newCalcBtn" onclick="randomizeColor()">New Calculator</button>
+    <button id="tapeBtn" onclick="toggleTape()">History</button>
+  </div>
+</div>
+
+<div class="tape-panel" id="tapePanel">
+  <div class="tape-header">
+    <span>History Tape</span>
+    <button class="tape-clear-btn" onclick="clearTape()">Clear</button>
+  </div>
+  <div class="tape-entries" id="tapeEntries">
+    <p class="tape-empty">No calculations yet...</p>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
