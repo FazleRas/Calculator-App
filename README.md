@@ -2,4 +2,4 @@
 Basic Calculator App
 - Four Functions and Exponentials
 - History Feature
-- Miscellaneous Features
+- Miscellaneous "Extra" Features
